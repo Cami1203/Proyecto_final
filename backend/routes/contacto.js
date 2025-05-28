@@ -175,7 +175,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-// Obtener mensajes (para el admin)
+// Obtener mensajes (para el admin, de acuerdo a lo definido)
 router.get('/', async (req, res) => {
     try {
         const { motivo, estado } = req.query;

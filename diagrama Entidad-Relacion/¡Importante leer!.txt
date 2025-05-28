@@ -1,0 +1,5 @@
+¡Importante leer!
+
+Profesor, hay tablas como la nombrada "domiciliario", "notificaciones_inventario", "codigo_recuperacion" y "producto_base" (visualizar en la imagen) que no tienen una función ¿y porque? porque son tablas que se dejaron listas para implementarlas a un futuro y continuar el proyecto.(por lo que las APIS no aparecerán respecto a las tablas antes mencionadas). quisimos agregar esas funciones que teníamos pensado con dichas tablas para presentarlo, pero el tiempo no nos dio; solo dejamos listo para hacerle mejorar en el futuro.
+
+Tome captura de pantalla al diagrama en supabase, porque al descargarlo, no mostraba todo el modelo, incluso, tuve que tomar dos capturas, porque aun así no se veía completo. 

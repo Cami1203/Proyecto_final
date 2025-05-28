@@ -4,7 +4,7 @@ const pool = require('../db')
 const { isAdmin } = require('../middleware/auth')
 const bcrypt = require('bcrypt')
 
-// Obtener lista de clientes
+// Obtener lista de clientes 
 router.get('/clientes', isAdmin, async (req, res) => {
   console.log('Obteniendo lista de clientes...')
   try {

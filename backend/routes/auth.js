@@ -4,7 +4,6 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const pool = require('../db');
 
-// Log when the route is being registered
 console.log('Configurando ruta POST /registro en el router de auth');
 
 router.post('/registro', async (req, res) => {
@@ -23,7 +22,6 @@ router.post('/registro', async (req, res) => {
       contraseña
     } = req.body;
 
-    // Log received data (excluding password)
     console.log('Datos recibidos:', {
       nombre,
       apellido,
@@ -36,7 +34,6 @@ router.post('/registro', async (req, res) => {
       codigo_postal
     });
 
-    // Verify if email already exists
     const existingUser = await pool.query(
       'SELECT * FROM clientes WHERE correo = $1',
       [correo]
@@ -81,7 +78,6 @@ router.post('/registro', async (req, res) => {
       ]
     );
 
-    // Return success without including password
     const { contraseña: _, ...userData } = result.rows[0];
     console.log('Usuario registrado exitosamente:', userData);
     res.json({
@@ -369,7 +365,7 @@ router.post('/verificar-codigo', async (req, res) => {
     }
 
     // Si llegamos aquí, el código es válido
-    // Hashear la nueva contraseña
+    // se procede a Hashear la nueva contraseña
     const hashedPassword = await bcrypt.hash(nueva_password, 10)
 
     // Actualizar la contraseña y limpiar el código de recuperación
